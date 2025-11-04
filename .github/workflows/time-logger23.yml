@@ -1,0 +1,14 @@
+name: Time Logger23
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  
+  workflow_dispatch:         
+
+jobs:
+  log_time:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print current date and time
+        run: date
